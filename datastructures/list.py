@@ -10,6 +10,7 @@
 # list.reverse()
 # list.copy()
 
+from collections import deque
 fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
 print(fruits.count('apple'))
 # 2
@@ -29,3 +30,23 @@ print(fruits.pop())
 print(fruits)
 
 # Using Lists as Stack
+# last in first out
+# use append to add a list to the top of the stack append() use pop() to retrieve an item from the top of the list
+stack = [3, 4, 5]
+stack.append(6)
+stack.append(7)
+print(stack)
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())
+print(stack)
+
+# using lists as queues
+# first element added is the first element retrieved first in first out
+# lists are not efficient for this purpose, doing inserts or pops from the beginning of the list is slow
+# to implement queue use collections.deque
+queue = deque(["Eric", "John", "Michael"])
+queue.append("Terry")
+queue.append("Graham")
+queue.popleft()
+print(queue)
