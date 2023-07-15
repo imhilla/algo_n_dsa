@@ -1,0 +1,1 @@
+// article link https://codeburst.io/binary-search-in-javascript-a-practical-example-7fda60ce59a1
