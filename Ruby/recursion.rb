@@ -43,3 +43,28 @@ def rec_fibonacci(n)
 end
 
 puts rec_fibonacci(6)
+
+def palindrome(string)
+  if string.length == 1 || string.length == 0
+    true
+  else
+    if string[0] == string[-1]
+      palindrome(string[1..-2])
+    else
+      false
+    end
+  end
+end
+
+puts palindrome('aba')
+
+def bottles(n)
+  if n == 0
+    puts 'no more bottles of beer on the wall'
+  else
+    puts "#{n} bottles of beer on the wall"
+    bottles(n-1)
+  end
+end
+
+puts bottles(5)
