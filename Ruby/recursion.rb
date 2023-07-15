@@ -68,3 +68,41 @@ def bottles(n)
 end
 
 puts bottles(5)
+
+def rec_test(n)
+  if n < 2
+    n
+  else
+    rec_test(n-1) + rec_test(n-2)
+  end
+end
+
+puts rec_test(5)
+puts rec_test(6)
+
+def flatten_array(array, result=[])
+  array.each do | element |
+    if element.kind_of?(Array)
+      flatten_array(element, result)
+    else
+      result << element
+    end
+  end
+  result
+end
+
+roman_mapping = {
+  1000 => "M",
+  900 => "CM",
+  500 => "D",
+  400 => "CD",
+  100 => "C",
+  90 => "XC",
+  50 => "L",
+  40 => "XL",
+  10 => "X",
+  9 => "IX",
+  5 => "V",
+  4 => "IV",
+  1 => "I"
+}
